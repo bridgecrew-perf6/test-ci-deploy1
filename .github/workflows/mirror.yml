@@ -1,0 +1,17 @@
+name: Mirroring
+
+on: [push, delete]
+
+jobs:
+  epitech:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: pixta-dev/repository-mirroring-action@v1
+        with:
+          target_repo_url:
+            ggit@github.com:norech/test-ci-deploy2.git
+          ssh_private_key:
+            ${{ secrets.GITHUB_EPITECH_SSH_PRIVATE_KEY }}
