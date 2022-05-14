@@ -14,4 +14,4 @@ jobs:
           target_repo_url:
             ggit@github.com:norech/test-ci-deploy2.git
           ssh_private_key:
-            ${{ secrets.GITHUB_EPITECH_SSH_PRIVATE_KEY }}
+            ${{ secrets.EPITECH_SSH_PRIVATE_KEY }}
